@@ -195,7 +195,7 @@ const getEntireCaptionStr = (captions: CaptionChunk[]) => {
 };
 
 export const countRepeatedWords = (captionChunks: CaptionChunk[]) => {
-  const captions = getEntireCaptionStr(captionChunks);
+  const captions = getEntireCaptionStr(captionChunks).replace('\'', ' ').replace('"', '');
 
   const words = captions.split(/\s+/);
 
